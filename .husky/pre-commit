@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+cd gene-host-app
+npm run lint-front
+
+cd ../gene-auth-app
+npm run lint-front
