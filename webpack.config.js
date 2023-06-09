@@ -4,7 +4,7 @@ const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPl
 const deps = require('./package.json').dependencies;
 module.exports = (_, argv) => ({
   output: {
-    publicPath: 'http://0.0.0.0:3003/'
+    publicPath: 'http://13.215.107.218:3003/'   
   },
 
   resolve: {
@@ -44,7 +44,7 @@ module.exports = (_, argv) => ({
       name: 'gene_host_app',
       filename: 'remoteEntry.js',
       remotes: {
-        auth: 'gene_auth_app@http://0.0.0.0.0:3001/remoteEntry.js',
+        auth: 'gene_auth_app@http://13.215.107.218:3001/remoteEntry.js',
       },
       exposes: {
         './atoms': './src/UI/atoms/index.tsx'
